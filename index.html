@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Water Queue - Home </title>  
+        <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+    crossorigin="anonymous"
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+
+        <style>
+            body {
+                font-family:'Segoe UI',sans-serif;
+                background-image:url(./water.bck.jpg);
+                color: #0a0a0a;
+                margin: 0;
+                padding:40px 20px;
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                
+            }
+            header {
+                text-align: center;
+                margin-bottom: 40px;
+                border-bottom: 2px double #bcaaa4;
+                padding-bottom: 20px;
+            }
+            header h1 {
+                color: #0369a1;
+                font-size: 2.8rem;
+                font-weight: 800;
+                margin: 0 0 5px 0;
+            }
+            header p{
+                color:#0284c7;
+                font-weight: 500;
+                margin:  0;
+
+            }
+            main {
+                max-width: 90%;
+                margin: 0 auto;
+                background-color: rgba(255, 255, 255, 0.9);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                padding: 40px;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                box-shadow:0 10px 30px rgba(14, 116, 144, 0.08);
+                border-radius: 16px;
+
+
+            }
+            nav a{
+                color: #00070a;
+                text-decoration:none ;
+                font-weight: bold;
+                padding: 6px 12px;
+                border-radius: 6px;
+                transition:background-color 0.3s ease, color 0.3s ease;
+                border-bottom-color: #0369a1;
+              }
+              nav a:hover, nav strong{
+                background-color: #e0f2fe;
+                color: #0369a1;
+                text-decoration: none;
+              }
+              .showcase-image {
+                max-height: 280px;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 12px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+
+              }
+              .intro-section p {
+                font-size: 1.1rem;
+                line-height: 1.6;
+                color: #334155;
+                margin-bottom: 25px;
+              }
+              .login-box {
+                margin-top: 35px;
+                padding: 30px;
+                background-color: #f0f9ff;
+                border: 1px solid #bae6fd;
+                border-radius: 12px;
+              }
+              .login-box h2 {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+                color: #0369a1;
+                margin-top: 0;
+                font-weight: 700;
+                text-align:center;
+              }
+              .form-group {
+                margin-bottom: 20px;
+                text-align:left;
+              }
+              .form-group-input,
+              .form-group-select {
+                width: 100%;
+                padding: 12px 16px;
+                border: 2px solid #bae6fd;
+                background-color: #ffffff;
+                font-family: inherit;
+                font-size: 1rem;
+                color: #0f172a;
+                box-sizing: border-box;
+                border-radius: 8px;
+                transition: border-color 0.3s ease, box-shadow 0.3s ease;
+              }
+              .form-group-input:focus,
+              .form-group-select:focus {
+                border-color: #0284c7;
+                box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.3);
+                outline: none;
+              }
+              .login-btn {
+                background-color: #0284c7;
+                color: #ffffff;
+                padding: 14px 28px;
+                border: none;
+                font-family: inherit;
+                font-size: 1rem;
+                cursor: pointer;
+                font-weight: 700;
+                border-radius: 8px;
+                width:100%;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                transition: background-color 0.3s ease, transform 0.2s ease;
+                margin-top: 10px;
+              }
+              .login-btn:hover {
+                background-color: #0369a1;
+                transform: translateY(-1px);
+              }
+              .login-btn:active {
+                transform: translateY(1px);
+              }
+
+
+
+                
+        </style>
+    </head>
+    <body>
+      <main>
+        <header>
+          <h1>Water Queue</h1>
+          <p>Public water distribution and rotation schedule</p><br><br>
+
+            <ul class="nav nav-pills nav-fill gap-2 p-1 small vintage-nav rounded-5 shadow-sm" id="pillNav2" role="tablist" style="display: flex;list-style:none; justify-content:center; background-color: rgba(2, 132, 199, 0..08); border:2px solid #bae6fd; padding: 8px!important; border-radius: 30px; margin:25px 0;">
+    
+
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link active rounded-5"
+        id="home-tab2"
+        data-bs-toggle="tab"
+        type="button"
+        role="tab"
+        aria-selected="true"
+        style="font-family: 'Segoe UI', sans-serif; font-weight:bold; background-color: #0284c7; color: #ffffff; padding: 10px 24px; border-radius: 20px; cursor: pointer; box-shadow:0 4px 12px rgba(2, 132, 199, 0.3)">
+        <a href="index.html" style="color:#ffffff;text-decoration:overline;"><strong>Home</strong></a>     
+        </button>
+        </li>
+        
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link rounded-5"
+        id="schedule-tab"
+        data-bs-toggle="tab"
+        type="button"
+        role="tab"
+        aria-selected="false"
+        style="background-color: white;"
+      >
+        <a href="dashboard.html">Dashboard</a>
+        </button>
+        </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link rounded-5"
+        id="contact-tab2"
+        data-bs-toggle="tab"
+        type="button"
+        role="tab"
+        aria-selected="false"
+        style="background-color: white;"
+      >
+        <a href="pricing.html">Pricing Guide</a>
+        </button>
+        </li>
+
+        <li class="nav-item" role="presentation">
+      <button
+        class="nav-link rounded-5"
+        id="contact-tab2"
+        data-bs-toggle="tab"
+        type="button"
+        role="tab"
+        aria-selected="false"
+        style="background-color: white;"
+      >
+        <a href="resources.html">Conservation Resources</a>
+        </button>
+        </li>
+
+        <li class="nav-item" role="presentation">
+      <button
+        class="nav-link rounded-5"
+        id="contact-tab2"
+        data-bs-toggle="tab"
+        type="button"
+        role="tab"
+        aria-selected="false"
+        style="background-color: white;"
+      >
+        <a href="about.html">About The Tracker</a>
+        </button>
+        </li>
+        </ul>
+
+          
+        </header>
+        
+          <section class="intro-section">
+            <p>Welcome to the Water Queue, This simple neighborhood calendar is built to help residents stay informed about water distribution schedules and conservation efforts.</p>
+            <img alt="Water Usage" class="iFOUS5" draggable="true" fetchpriority="high" loading="auto" elementtiming="closeup-image-main-MainPinImage" srcset="https://i.pinimg.com/736x/3c/57/e3/3c57e32966f8cdf2e566a0dd7b3d4901.jpg 736w, https://i.pinimg.com/1200x/3c/57/e3/3c57e32966f8cdf2e566a0dd7b3d4901.jpg 1200w" src="https://i.pinimg.com/736x/3c/57/e3/3c57e32966f8cdf2e566a0dd7b3d4901.jpg" style="height: 500px; width: 600px; object-fit: cover;  ">
+            
+            <section class="login-box">
+            <h2>Login to see your schedule</h2>
+            <form action="dashboard.html" method="GET">
+              <div class="form-group">
+                <label for="username">Name</label>
+                <input type="text" id="username" name="username" class="form-group-input" required><br>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-group-input"
+                 pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*(),.?=:{}|<>]).{9,}"
+                title="Must be more than 8 characters, contain atleast one capital letter, and atleast one symbol."
+                required><br>
+               </div>
+
+              <button type="submit" class="login-btn">Login</button>
+
+         
+              </div>
+           </section>
+          </section>
+        </form>
+        </main>
+          <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"
+  ></script>
+
+    </body>
+</html>

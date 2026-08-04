@@ -1,0 +1,11 @@
+{
+    "editor.quickSuggestions":{
+        "other":"on",
+        "comments":"off",
+        "strings":"off",
+    }
+    "git.autofetch": true,
+    "chat.mcp.serverSampling": {
+
+    }
+}
