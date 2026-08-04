@@ -24,7 +24,11 @@
                 background-position: center;
                 background-attachment: fixed;
                 background-repeat: no-repeat;
-                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+
             }
             header {
                 text-align: center;
@@ -146,7 +150,26 @@
               .login-btn:active {
                 transform: translateY(1px);
               }
+              img{
+                max-width: 100%;
+                height:auto;
+                display:block;
 
+
+              }
+              .image-wrapper{
+                max-width: 600px;
+                margin: 0 auto;
+                width:100%;
+              }
+              .card-image {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                border-radius:12px;
+                margin-bottom: 20px;
+              }
+          
 
 
                 
@@ -235,8 +258,9 @@
         
           <section class="intro-section">
             <p>Welcome to the Water Queue, This simple neighborhood calendar is built to help residents stay informed about water distribution schedules and conservation efforts.</p>
-            <img style="max-width:600px" alt="Water Usage" class="iFOUS5" draggable="true" fetchpriority="high" loading="auto" elementtiming="closeup-image-main-MainPinImage" srcset="https://i.pinimg.com/736x/3c/57/e3/3c57e32966f8cdf2e566a0dd7b3d4901.jpg 736w, https://i.pinimg.com/1200x/3c/57/e3/3c57e32966f8cdf2e566a0dd7b3d4901.jpg 1200w" src="https://i.pinimg.com/736x/3c/57/e3/3c57e32966f8cdf2e566a0dd7b3d4901.jpg" style="height: 500px; width: 600px; object-fit: cover;  ">
-            
+            <div class="image-wrapper">
+            <img class="card-image" alt="Water Usage" src="./water.usage.jpg">
+            </div>
             <section class="login-box">
             <h2>Login to see your schedule</h2>
             <form action="dashboard.html" method="GET">
