@@ -14,12 +14,15 @@
 
         <style>
             body {
-                font-family: cursive;
-                background-color: #fbf8f1;
-                color: #4e342e;
+               font-family: 'Segoe UI', sans-serif;
+                background-image:URL(./water.bck.jpg);
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                color: #0f172a;
                 margin: 0;
-                padding: 30px 20px;
-                line-height: 1.6;
+                padding: 40px 20px;
             }
             header {
                 text-align: center;
@@ -55,14 +58,17 @@
                 border-bottom: 2px solid #3e2723
             }
             main {
-                max-width: 800px;
-                margin: 0 auto;
-                background-color: #ffffff;
-                padding: 35px;
-                border-radius: 4px;
-                border: 1px solid #d7ccc8;
-                box-shadow: 0 4px 10px rgba(78, 52, 46, 0.05);
-            }
+               max-width: 900px;
+                
+                margin:0 auto;
+                background-color: rgba(255, 255, 255, 0.9);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                padding: 40px;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                box-shadow:0 10px 30px rgba(14, 116, 144, 0.08);
+                border-radius: 16px;
+                        }
             .about-content h2 {
                 color: #3e2723;
                 font-size: 1.8rem;
@@ -184,9 +190,10 @@
         data-bs-toggle="tab"
         type="button"
         role="tab"
-        aria-selected="true"
-        style="font-family: 'Segoe UI', sans-serif; font-weight:bold; background-color: #0284c7; color: #ffffff; padding: 10px 24px; border-radius: 20px; cursor: pointer; box-shadow:0 4px 12px rgba(2, 132, 199, 0.3)">
-        <a href="index.html" style="color:#ffffff;text-decoration:overline;"><strong>Home</strong></a>     
+        aria-selected="false"
+        style="background-color: white";>
+        
+        <a href="index.html" >Home</a>     
         </button>
         </li>
         
@@ -198,6 +205,7 @@
         type="button"
         role="tab"
         aria-selected="false"
+        style="background-color: white";
       >
         <a href="dashboard.html">Dashboard</a>
         </button>
@@ -210,6 +218,7 @@
         type="button"
         role="tab"
         aria-selected="false"
+        style="background-color: white";
       >
         <a href="pricing.html">Pricing Guide</a>
         </button>
@@ -223,6 +232,7 @@
         type="button"
         role="tab"
         aria-selected="false"
+        style="background-color: white";
       >
         <a href="resources.html">Conservation Resources</a>
         </button>
@@ -235,9 +245,9 @@
         data-bs-toggle="tab"
         type="button"
         role="tab"
-        aria-selected="false"
-      >
-        <a href="about.html">About The Tracker</a>
+        aria-selected="true"
+        style="font-family: 'Segoe UI', sans-serif; font-weight:bold; background-color: #0284c7; color: #ffffff; padding: 10px 24px; border-radius: 20px; cursor: pointer; box-shadow:0 4px 12px rgba(2, 132, 199, 0.3)"      >
+        <a href="about.html" style="color:#ffffff;text-decoration:overline;"><strong>About The Tracker</strong></a>
         </button>
         </li>
         </ul>
