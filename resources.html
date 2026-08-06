@@ -25,7 +25,7 @@
                 padding: 40px 20px;
             }
             main{
-                max-width: 900px;
+                max-width: 950px;
                 
                 margin:0 auto;
                 background-color: rgba(255, 255, 255, 0.9);
@@ -39,7 +39,7 @@
             header {
                 text-align: center;
                 margin-bottom: 35px;
-                border-bottom: 2px double #bcaaa4;
+                border-bottom: 2px double #e0f2fe;
                 padding-bottom: 25px;
             }
             header h1 {
@@ -50,61 +50,65 @@
                 letter-spacing: -0.5px;
             }
             header p{
-                color: #0369a1;
+                color: #0284c7;
                 font-weight: 500;
                 margin: 0;
-            }
-            nav a {
-                text-decoration: none;
-                color: #8d6e63;
-                font-weight: bold;
-                padding: 5px 10px;
-            }
-            nav a:hover {
-                color:#942815;
-                text-decoration: underline;
-            }
-             nav a.active {
-                color:#3e2723;
-                font-weight: bold;
-                border-bottom: 2px solid #3e2723
             }
 
                 
             .grid-container {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 25px;
+                display: grid !important;
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))!important;
+                gap: 20px!important;
                 margin-top:30px;
-
+                margin-bottom: 35px;
+                
             }
             .resource-card {
-                background-color: #ffffff;
-                border: 1px solid #d7ccc8;
-                border-radius: 6px;
+                background-color: rgba(255, 255, 255, 0.75);
+                border: 2px solid #bae6fd;
+                border-radius: 12px;
                 padding: 24px ;
-                box-shadow:0 4px 10px rgba(78,52, 46, 0.04);
-                transition: transform 0.3s ease; 
+                box-shadow:0 4px 10px rgba(14, 116, 144, 0.02);
+                transition: transform 0.3s ease border-color 0.3s ease; 
             }
             .resource-card:hover {
-                transform: translateY(-5px);
-                border-color: #4e342e;
+                transform: translateY(-4px);
+                border-color: #0284c7;
             }
             .resource-card h3 {
-                color:#3e2723;
+                color:#0369a1;
+                font-size:1.25rem;
+                font-weight:700;
                 margin-top: 0;
-                border-bottom: 1px dashed #d7ccc8;
+                margin-bottom: 12px;
+                border-bottom: 2px solid #e0f2fe;
                 padding-bottom:8px;
-
+            }
+            .resuorce-card p{
+                font-size:0.95rem;
+                color: #334155;
+                line-height:1.6;
+                margin :0;
+                text-align:justify;
             }
             .alert-banner {
-                background-color: #fbe9e7;
-                border-left: 5px solid #d84315;
-                color: #ff8f00;
-                padding: 15px;
-                margin-bottom: 30px;
-                border: raius 4px;
-                font-size: 0.95rem;
+                background-color: #fff5f5;
+                border: 2px dashed #f87171;
+                border-left: 6px solid #ef4444;
+                color: #991b1b;
+                padding: 20px;
+                margin-top:35px;
+                border-radius: 8px;
+                font-size: 1rem;
+                line-height:1.5rem;
+                text-align : left;
+                
+            }
+            .alert-banner strong{
+                color:#b91c1c;
+                text-transform:uppercase;
+                letter-spacing:0.5px;
                 
             }
             .image-link-container {

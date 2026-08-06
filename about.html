@@ -14,7 +14,7 @@
 
         <style>
             body {
-               font-family: 'Segoe UI', sans-serif;
+                font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
                 background-image:URL(./water.bck.jpg);
                 background-size: cover;
                 background-position: center;
@@ -23,105 +23,120 @@
                 color: #0f172a;
                 margin: 0;
                 padding: 40px 20px;
+                line-height: 1.6;
             }
             header {
                 text-align: center;
-                margin-bottom: 40px;
-                border-bottom: 2px double #bcaaa4;
-                padding-bottom: 20px;
+                margin-bottom: 35px;
+                border-bottom: 2px double #e0f2fe;
+                padding-bottom: 25px;
             }
             header h1 {
-                color: #3e2723;
-                font-size: 2.5rem;
-                margin-bottom: 8px;
-                letter-spacing: 1px;
+                color: #0369a1;
+                font-size: 2.8rem;
+                font-weight:800;
+                margin: 0 0 5px 0;
+                letter-spacing: -0.5px;
             }  
             header p {
-                color: #6d4c41;
-                font-style: italic;
-                margin: 5px 0 15px 0;
+                color: #0284c7;
+                font-weight: 500;
+                margin: 0;
             } 
-            nav a {
-                text-decoration: none;
-                color: #8d6e63;
-                font-weight: bold;
-                padding: 5px 10px;
-                transition: color 0.3s ease;
-            }
-            nav a:hover {
-                color: #c22307;
-                text-decoration: underline;
-            } 
-            nav a.active {
-                color:#3e2723;
-                font-weight: bold;
-                border-bottom: 2px solid #3e2723
-            }
+            
             main {
                max-width: 900px;
                 
                 margin:0 auto;
-                background-color: rgba(255, 255, 255, 0.9);
+                background-color: rgba(255, 255, 255, 0.85);
                 backdrop-filter: blur(12px);
                 -webkit-backdrop-filter: blur(12px);
                 padding: 40px;
                 border: 1px solid rgba(255, 255, 255, 0.5);
                 box-shadow:0 10px 30px rgba(14, 116, 144, 0.08);
                 border-radius: 16px;
-                        }
+             }
+            .about-text{
+                font-size:1.05rem;
+                color:#341553;
+                margin-bottom:20px;
+                text-align:justify;
+            }
+
             .about-content h2 {
-                color: #3e2723;
-                font-size: 1.8rem;
+                color: #0369a1;
+                font-size: 1.6rem;
+                font-weight:700;
                 margin-top: 30px;
-                margin-bottom: 15px;
-                border-bottom: 1px dashed #d7ccc8;
+                margin-bottom: 12px;
+                border-bottom: 2px solid #0284;
                 padding-bottom: 6px;
             }
-            .about-content p {
-                font-size: 1rem;
-                margin-bottom: 20px;
-                color: #5d4037;
-                text-align: justify;
-            }
-            .about-content h2:first-of-type {
+    
+            .main > h2:first-of-type {
                 margin-top: 0;
             }
             .image-link-container {
-                text-align: center;
-                margin-top: 40px;
-                padding-top: 20px;
-                border-top: 1px dashed #d7ccc8;
+             text-align: center;
+            margin-top: 50px; 
+            padding-top: 30px;
+            border-top: 2px dashed #0284; 
             }
+
             .image-link-container p {
-                font-size: 0.95rem;
-                color: #8d6e63;
-                font-style: italic;
-            }
-            .image-link-container img {
-                width: 64px;
-                height: auto;
-                padding: 10px;
-                border: 1px solid #d7ccc8;
-                border-radius: 50%;
-                background-color: #fbf8f1;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-            .image-link-container img:hover {
-                transform: scale(1.1) rotate(5deg);
-                box-shadow: 0 8px 15px rgba(78, 52, 46, 0.15);
-                background-color: #f5efe6;
-                border-color: #3e2723;
-            }
+             font-family: 'Georgia', serif;
+             font-style: italic;
+             font-size: 1rem;
+             color: #0284; 
+             margin-bottom: 20px;
+}
+
+
+.image-link-container a {
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+}
+
+
+.image-link-container img {
+    width: 70px; 
+    height: auto;
+    padding: 15px;
+    background-color: #fdfbf7; 
+    border: 2px solid #d7ccc8; 
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(78, 52, 46, 0.05); 
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.image-link-container a:hover img {
+    transform: translateY(-5px) scale(1.08) rotate(4deg);
+    background-color: #f5efe6;
+    border-color: navy; 
+    box-shadow: 0 10px 18px rgba(78, 52, 46, 0.12); 
+}
             .form-container {
             margin-top: 40px;
-            padding-top: 25px;
-            border-top: 1px dashed #d7ccc8;
+            padding: 30px;
+            border:2px solid #bae6fd ;
+            border-radius: 12px;
+            background-color: #f0f9ff;
+            box-shadow: inset 0 0 10px rgba(2, 132, 199, 0.02);
         }
 
         .form-container h2 {
-            color: #3e2723;
-            font-size: 1.6rem;
-            margin-bottom: 12px;
+            margin-top: 0;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            margin-bottom: 10px;
+        }
+
+        .form-container p{
+            font-size: 0.95rem;
+            color:#334155;
+            margin-bottom: 20px;
         }
 
         .form-group {
@@ -131,54 +146,59 @@
 
         .form-group label {
             display: block;
-            font-weight: bold;
+            font-weight: 600;
             margin-bottom: 8px;
-            color: #3e2723;
+            color: #0369a1;
             font-size: 0.95rem;
         }
         .form-group input, 
         .form-group textarea {
             width: 100%;
-            padding: 12px;
-            border: 1px solid #d7ccc8;
-            background-color: #faf8f5;
-            font-family: 'Georgia', serif;
+            padding: 12px 16px;
+            border: 2px solid #bae6fd;
+            background-color: #ffffff;
+            font-family: inherit;
             font-size: 1rem;
-            color: #4e342e;
+            color: #0f172a;
             box-sizing: border-box;
-            border-radius: 4px;
-            transition: border-color 0.3s ease, background-color 0.3s ease;
+            border-radius: 8px;
+            outline: navy;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
         .form-group input:focus, 
         .form-group textarea:focus {
-            outline: none;
-            border-color: #4e342e;
-            background-color: #ffffff;
+            outline: navy;
+            border-color: #0284c7;
+            box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.15);
         }
-        .vintage-btn {
-            background-color: #4e342e;
-            color: #fdfbf7;
-            border: none;
+        .submit-btn {
+            background-color: #0284c7;
+            color: #ffffff;
+            border: #0284;
             padding: 14px 28px;
-            font-family: 'Georgia', serif;
-            font-size: 1rem;
-            font-weight: bold;
+            font-size: 1.05rem;
+            font-weight: 700;
             cursor: pointer;
-            border-radius: 4px;
+            border-radius: 8px;
             width: 100%;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease transform 0.2s ease;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
 
-        .vintage-btn:hover {
-            background-color: #3e2723;
+        .submit-btn:hover {
+            background-color: #0369a1;
+            transform: translateY(-1px);
+        }
+        .submit-btn:active{
+            transform: translateY(1px);
         }
         </style>
     </head>
     <body>
+        <main>
         <header>
-            <h1>About the Water Queue Project</h1>
+            <h1>About this Project</h1>
             <p>This project aims to provide a simple solution for managing water queues in common areas.</p>
              <ul class="nav nav-pills nav-fill gap-2 p-1 small vintage-nav rounded-5 shadow-sm" id="pillNav2" role="tablist" style="display: flex;list-style:none; justify-content:center; background-color: rgba(2, 132, 199, 0..08); border:2px solid #bae6fd; padding: 8px!important; border-radius: 30px; margin:25px 0;">
     
@@ -253,20 +273,14 @@
         </ul>
 
 
-            <nav>
-                <a href="index.1.html">Welcome</a>
-                <a href="dashboard.html">Dashboard</a>
-                <a href="pricing.html">Pricing Guide</a>
-                <a href="resources.html">Conservation Resources</a>
-                <a href="about.html"><strong>About The Tracker</strong></a>
-            </nav>
+           
         </header>
-        <main>
+        
             <section class="about-content">
                 <h2>Why This Tool Exists</h2>
-                <p>In many communities, managing water queues can be a challenge, as it runs on a rotating schedule rather than 24/7. Missing an allocation day may cause critical water shortages that will last for  a week on households.</p>
+                <p class="about-text">In many communities, managing water queues can be a challenge, as it runs on a rotating schedule rather than 24/7. Missing an allocation day may cause critical water shortages that will last for  a week on households.</p>
                 <h2>Project goals</h2>
-                <p>This utility provides an accesible public portals to monitor local nieghbourhood water status updates.</p>
+                <p class="about-text">This utility provides an accesible public portals to monitor local nieghbourhood water status updates.</p>
             </section>
             <div class="form-container">
                 <h2>Report Pipeline Delay</h2>
@@ -284,7 +298,7 @@
                         <label for="issue-details">Disruption Details:</label>
                         <textarea id="issue-details" name="issue-details" required placeholder="Please provide details about the disruption..." rows="4"></textarea>
                     </div>
-                    <button type="submit" class="vintage-btn">Submit Report</button>
+                    <button type="submit" class="submit-btn">Submit Report</button>
                 </form>
             </div>
             <div class="image-link-container">
