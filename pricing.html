@@ -82,7 +82,9 @@
             }
             .aquatic-table th{
                 background-color: #0284c7;
-                color: #ffffff;
+                background-color:#f0f9ff;
+                border: 2px solid #bae6fd;
+                color: #0284ac;
                 text-align: left;
                 padding: 14px 18px;
                 font-weight:700;
@@ -252,8 +254,9 @@
                 top: 50% !important;
                 left:50%!important;
                 transform:translate(-50%, -50%)!important;
-                background-color: #1e3a8a!important;
-                color:#ffffff!important;
+                background-color:#0284c7;
+                border: 2px solid #87d3fc;
+                color:black!important;
                 padding: 16px 20px!important;
                 border-radius: 8px !important;
                 font-size: 0.95rem !important;
@@ -262,6 +265,11 @@
                 z-index: 99999 !important;
                 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
                 line-height: 1.4 !important;
+            }
+            .table-container{
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
             }
 
         </style>
@@ -365,7 +373,8 @@
         <h2>Standard Residential Tariff Brackets</h2>
         <p class="pricing-intro">Utility pricing scales automatically discourage domestic resource exhaustion. Review the official metric cost tiers below:</p>
 
-        <table class="aquatic-table">
+       <div class="table-container">
+         <table class="aquatic-table">
             <thead>
                 <tr>
                     <th>Consumption Tier Range</th>
@@ -413,6 +422,7 @@
                 </tr>
             </tbody>
         </table>
+       </div>
         <div class="div class-box">
             <h2>Estimate Monthly Utility Cost</h2>
             <p>Input your family's average planned metric consumption to preview budget allocations ahead of active line distribution.</p>

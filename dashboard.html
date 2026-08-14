@@ -272,7 +272,13 @@
 
             }
             .calc-btn.hover{
-                background-color:#0369a1;}
+                background-color:#0369a1;
+            }
+            .table-container{
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
           
         </style>
         </head> 
@@ -404,6 +410,7 @@
         <h2>Master Neighborhoood Schedules<br>
         </h2>
         <p> On the table below you can find active distribution calendar for your districts.</p>
+        <div class="table-container">
           <table class="aquatic-table">
                         <thead>
                             <tr>
@@ -458,6 +465,7 @@
                             </tr>
                         </tbody>
                     </table>
+        </div>
        </section><br>
         
     </main>
