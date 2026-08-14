@@ -1,0 +1,7 @@
+<p style="color:#0a0a0a">Understanding scaled cost thresholds per cubic meter volume</p><br>
+
+.status-badge.flowing {
+                background-color: #e8f5e9;
+                color: #0bd815;
+                border-color: #c8e6c9;
+            }

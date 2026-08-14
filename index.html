@@ -198,19 +198,7 @@
         </button>
         </li>
 
-        <li class="nav-item" role="presentation">
-      <button
-        class="nav-link rounded-5"
-        id="schedule-tab"
-        data-bs-toggle="tab"
-        type="button"
-        role="tab"
-        aria-selected="false"
-        style="background-color: white"
-      >
-        <a href="dashboard.html">Dashboard</a>
-        </button>
-        </li>
+        
         
     <li class="nav-item" role="presentation">
       <button
@@ -220,7 +208,7 @@
         type="button"
         role="tab"
         aria-selected="false"
-        style="background-color: white;"
+        style="background-color: white; font-family: cursive;"
       >
         <a href="pricing.html">Pricing Guide</a>
         </button>
@@ -234,9 +222,9 @@
         type="button"
         role="tab"
         aria-selected="false"
-        style="background-color: white;"
+        style="background-color: white; font-family: cursive;"
       >
-        <a href="resources.html">Conservation Resources</a>
+        <a href="resources.html">Resource Conservation</a>
         </button>
         </li>
 
@@ -248,7 +236,7 @@
         type="button"
         role="tab"
         aria-selected="false"
-        style="background-color: white;"
+        style="background-color: white; font-family: cursive;"
       >
         <a href="about.html">About The Tracker</a>
         </button>
@@ -261,21 +249,26 @@
           <section class="intro-section">
             <p>Welcome to the Water Queue, This simple neighborhood calendar is built to help residents stay informed about water distribution schedules and conservation efforts.</p>
             <div class="image-wrapper">
-            <img class="card-image" alt="Water Usage" src="./water.usage.jpg">
+            <img class="card-image" alt="Local tap water usage" src="./water.usage.jpg">
             </div>
             <section class="login-box">
             <h2>Login to see your schedule</h2>
-            <form action="dashboard.html" method="GET">
+            <form id="loginForm" method="get">
               <div class="form-group">
                 <label for="username">Name</label>
                 <input type="text" id="username" name="username" class="form-group-input" required><br>
               </div>
               <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" class="form-group-input"
-                 pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*(),.?=:{}|<>]).{9,}"
-                title="Must be more than 8 characters, contain atleast one capital letter, and atleast one symbol."
-                required><br>
+                <input
+                 type="password"
+                  id="password"
+                  name="password"
+                  class="form-group-input"
+                  minlength="8"
+                  pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_\[\]|:;\",.?\ ]).{8,} 
+                  title="Must be more than 8 characters, contain atleast one capital letter, and atleast one symbol."
+                     required><br>
                </div>
 
               <button type="submit" class="login-btn">Login</button>
@@ -286,11 +279,25 @@
           </section>
         </form>
         </main>
+       
           <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"
   ></script>
+   <script>
+          document.getElementById('loginForm').addEventListener('submit', function(event) {
+            // Stop the form from trying to post to a server
+            event.preventDefault();
+            // Explicitly check if the minlength and pattern rules pass
+            if (event.target.checkValidity()) {
+            window.location.href="dashboard.html"; //Onlyopens if valid!
+            }else{
+              // Triggers standard red browser popup warnings automatically
+              event.target.reportValidity();
+            }
+            })
+        </script>
 
     </body>
 </html>

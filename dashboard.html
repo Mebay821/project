@@ -188,39 +188,91 @@
                 letter-spacing: 0.5px;
                 
             }
-            .status-badge.flowing {
-                background-color: #e8f5e9;
-                color: #0bd815;
-                border-color: #c8e6c9;
+            
+            .active-status{
+                color:#2e7d32 !important;
+                font-weight:bold !important;
+                background-color: #e8f5e9 !important;
             }
             .status-badge.waiting {
                 background-color: #fff8e1;
                 color: #c93508;
                 border-color: #c8e6c9;
             }
-            .image-link-container {
-             text-align: center;
-            margin-top: 50px; 
-            padding-top: 30px;
-            border-top: 2px dashed #d7ccc8; 
+            .water-report-box{
+                background-color:#f0f9ff;
+                border: 2px solid #bae6fd;
+                padding: 30px;
+                margin-top: 40px;
+                border-radius: 12px;
+                box-shadow: inset 0 0 10px rgba(2, 132, 199, 0.02);
             }
+            .usage-input-card{
+                display:flex;
+                flex-direction: column;
+                background-color: #f8f9fa;
+                padding: 15px;
+                border-radius: 8px;
+                border: 1px solid #e2e8f0;
+                margin-bottom: 20px ;
+                text-align:left;
+            }
+            .usage-input-card label{
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                 display: block;
+                font-weight: 600;
+                margin-bottom: 8px;
+                font-size:0.95rem;
+                color: #0369a1
+            
+            }
+            .usage-input-card input{
+                width: 100%;
+                font-size: 1rem;
+                border-radius: 4px;
+                padding: 12px 16px;
+                border: 2px solid #bae6fd;
+                background-color: #ffffff;
+                color:#0f172a;
+                box-sizing: border-box;
+                transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            }
+            .usage-input-card:focus{
+                border-color: #0284c7;
+                box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.15);
+            }
+            .calc-btn{
+               background-color:#0284c7;;
+                color: #ffffff;
+                border: none;
+                padding: 14px 28px;
+                font-size: 1.05rem;
+                font-weight: 700;
+                cursor: pointer;
+                border-radius: 8px;
+                width: 100%;
+                text-transform: uppercase;
+                letter-spacing:0.5px;
+                transition:background-color 0.3s ease;
 
-            .image-link-container p {
-             font-family: 'Georgia', serif;
-             font-style: italic;
-             font-size: 1rem;
-             color: #8d6e63; 
-             margin-bottom: 20px;
-}
+            }
+            .calc-btn.hover{
+                background-color:#0369a1;}
           
         </style>
         </head> 
     <body style="background-color: rgba(255, 255, 255, 0.9); ">
         <main style="background-color: rgba(255, 255, 255, 0.9); max-width: 1000px; font-size: medium;">
+            <button style="border-radius:360px; border-color: #0284c7;" aria-label="back to home page">
+                <a href="./index.html">
+                <span class="icon">↩</span>
+                </a>
+            </button>
         <header>
             <h1 style="font-size: xx-large;"><strong>Dear Neighborhood,<br>
                         Utility Pricing Tiers</strong> </h1>
-            <p style="color:#0a0a0a">Understanding scaled cost thresholds per cubic meter volume</p><br>
+            
             
 
             <p class="User-greeting">Welcome back, <strong>Resident</strong> | District Zone Account</p>
@@ -246,7 +298,7 @@
         type="button"
         role="tab"
         aria-selected="false"
-        style="background-color: white;">
+        style="background-color: white; font-family: cursive;">
         
         <a href="index.html" >Home</a>     
         </button>
@@ -273,7 +325,7 @@
         type="button"
         role="tab"
         aria-selected="false"
-        style="background-color: white;"
+        style="background-color: white; font-family: cursive;"
       >
         <a href="pricing.html">Pricing Guide</a>
         </button>
@@ -287,9 +339,9 @@
         type="button"
         role="tab"
         aria-selected="false"
-        style="background-color: white;"
+        style="background-color: white; font-family: cursive;"
       >
-        <a href="resources.html">Conservation Resources</a>
+        <a href="resources.html">Resource Conservation</a>
         </button>
         </li>
 
@@ -301,7 +353,7 @@
         type="button"
         role="tab"
         aria-selected="false"
-        style="background-color: white;"
+        style="background-color: white; font-family: cursive;"
       >
         <a href="about.html">About The Tracker</a>
         </button>
@@ -313,23 +365,24 @@
                 This page can calculate and let you know if there has been any increment
                  of consumption from the past month, how much it may cost and any other related requirments. </p><br>
     
-    
-       <section class="analytics-box">
-        <h2>Water Usage Report</h2>
-        <div class="stats-grid">
-            <div class="stat-card">
-                <p>Last Month's Usage</p>
-                <div class="stat-number">14.5 m<sup>3</sup></div>
-            </div>
-            <div class="stat-card">
-                <p>This Month's Usage</p>
-                <div class="stat-number">12.1 m<sp>3</sp></div>
-            </div>
-        </div>
-        <br>
-        <div class="trend-wrapper">
-            <span class="trend-badge decrease">
-                &#9660; Good Job! Your usage decreased by 2.4 m&sup3 compared to last month.
+            <div class="water-report-box">
+                <h2>Water Usage Report</h2>
+                <form id="usageForm">
+                    <div class="usage-input-card">
+                        <label for="lastMonth">LAST MONTH'S USAGE (m&sup3;)</label>
+                        <input type="number" id="lastMonth" placeholder="e.g 14.5" required min="0" step="any">
+                    </div>
+                    <div class="usage-input-card">
+                        <label for="thisMonth">THIS MONTH'S USAGE (m&sup3;)</label>
+                        <input type="number" id="thisMonth" placeholder="e.g 12.1" required min="0" step="any">
+                    </div>
+                    <button type="submit" class="calc-btn">Calculate Report</button>
+                </form>
+                <div id="resultBox" class="result-card"  >
+                    <p id="feedbackText"></p>
+                </div>
+            
+                
             </span><br><br>
         </div>
        </section>
@@ -346,44 +399,44 @@
                                 <th>Pipeline Status</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
+                        <tbody id="schedule-table-body">
+                            <tr id="district-1">
                                 <td><strong>DISTRICT 1</strong></td>
                                 <td>wed, thu, fri</td>
                                 <td>6.00 birr / m&sup3</td>
                                 <td><span class="status-badge waiting">Standby</span></td>
                             </tr>
-                            <tr>
+                            <tr id="district-2">
                                 <td><strong>DISTRICT 2</strong></td>
                                 <td>thu, fri, sat</td>
                                 <td>6.00 birr / m&sup3</td>
                                 <td><span class="status-badge waiting">Standby</span></td>
                             </tr>
-                            <tr>
+                            <tr id="district-3">
                                 <td><strong>DISTRICT 3</strong></td>
                                 <td>fri, sat, sun</td>
                                 <td>6.00 birr / m&sup3</td>
                                 <td><span class="status-badge waiting">Standby</span></td>
                             </tr>
-                            <tr>
+                            <tr id="district-4">
                                 <td><strong>DISTRICT 4</strong></td>
                                 <td>sat, sun, mon</td>
                                 <td>6.00 birr / m&sup3</td>
                                 <td><span class="status-badge waiting">Standby</span></td>
                             </tr>
-                            <tr>
+                            <tr id="district-5">
                                 <td><strong>DISTRICT 5</strong></td>
                                 <td>sun, mon, tue</td>
                                 <td>6.00 birr / m&sup3</td>
                                 <td><span class="status-badge waiting">Standby</span></td>
                             </tr>
-                            <tr>
+                            <tr id="district-6">
                                 <td><strong>DISTRICT 6</strong></td>
                                 <td>mon, tue, wed</td>
                                 <td>6.00 birr / m&sup3</td>
-                                <td><span class="status-badge flowing">Flowing</span></td>
+                                <td><span class="status-badge waiting">Standby</span></td>
                             </tr>
-                            <tr>
+                            <tr id="district-7">
                                 <td><strong>DISTRICT 7</strong></td>
                                 <td>tue, wed, thu</td>
                                 <td>6.00 birr / m&sup3</td>
@@ -391,12 +444,85 @@
                             </tr>
                         </tbody>
                     </table>
-       </section>
+       </section><br>
+        
     </main>
+           
     <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"
   ></script>
+  <script>
+    document.getElementById('usageForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        const lastMonth = parseFloat(document.getElementById('lastMonth').value);
+        const thisMonth = parseFloat(document.getElementById('thisMonth').value);
+        
+        const difference = thisMonth - lastMonth;
+        const absDifference = Math.abs(difference).toFixed(1);
+
+        const resultBox = document.getElementById('resultBox');
+        const feedbackText = document.getElementById('feedbackText');
+
+        resultBox.style.display = 'block';
+
+        if (difference > 0){
+            
+            resultBox.style.backgroundColor = '#f19275';
+            resultBox.style.color= '#f30606'
+            feedbackText.innerHTML = `⚠ Alert! Your usage increased by <strong> ${absDifference} m&sup3</strong> compared to last month.`;
+        }else if (difference < 0) {
+
+            resultBox.style.backgroundColor = '#0bd815';
+            resultBox.style.color = '#166534';
+            feedbackText.innerHTML = `🎉 Good Job! Your usage decreased by <strong> ${absDifference} m&sup3</strong> compared to last month.` ;
+        } else {
+            resultBox.style.backgroundColor = '#f1f5f9';
+             resultBox.style.color = '#33415';
+             feedbackText.innerHTML = `•Your water usage remained identical to last month.`;
+        }
+    });
+
+  </script>
+
+
+  <script>
+    const daysOfWeek = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+    const todayIndex = new Date().getDay();
+    const today = daysOfWeek[todayIndex];
+
+    const schedules = {
+        "district-1": ["wed", "thu", "fri"],
+        "district-2": ["thu", "fri", "sat"],
+        "district-3": ["fri", "sat", "sun"],
+        "district-4": ["sat", "sun", "mon"],
+        "district-5": ["sun", "mon", "tue"],
+        "district-6": ["mon", "tue", "wed"],
+        "district-7": ["tue", "wed", "thu"]
+    };
+
+    Object.keys(schedules).forEach(function(districtId) {
+        const row = document.getElementById(districtId);
+
+        if(row) {
+            const statusCell = row.querySelector(".status-badge");
+
+            if (schedules[districtId].includes(today)) {
+                statusCell.innerText = "FLOWING";
+                statusCell.classList.add("active-status");
+                row.classList.add("active-row");
+            } else {
+                statusCell.innerText = "STANDBY";
+                statusCell.classList.remove("active-status");
+                row.classList.remove("active-row");
+            }   
+        }
+
+    });
+  </script>
+
     </body>
+
 </html>
