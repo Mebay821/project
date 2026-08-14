@@ -247,20 +247,21 @@
                 background-color: #0369a1;
             }
             .clean-popup-box{
-                position:absolute;
-                bottom:130%;
-                left:50%;
-                transform:translateX(-50%);
-                background-color: #1e3a8a;
-                color:#ffffff;
-                padding: 10px 14px;
-                border-radius: 6px;
-                font-size: 0.85rem;
-                width:240px;
-                text-align: center;
-                z-index: 1000;
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-                line-height: 1.4;
+                position: fixed !important;
+                bottom:auto !important;
+                top: 50% !important;
+                left:50%!important;
+                transform:translate(-50%, -50%)!important;
+                background-color: #1e3a8a!important;
+                color:#ffffff!important;
+                padding: 16px 20px!important;
+                border-radius: 8px !important;
+                font-size: 0.95rem !important;
+                width:280px !important;
+                text-align: center !important;
+                z-index: 99999 !important;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+                line-height: 1.4 !important;
             }
 
         </style>
@@ -496,7 +497,7 @@
                         }else{
                             document.querySelectorAll('.clean-popup-box').forEach(function(p) { p.remove();});
 
-                            var box = doument.createElement('div');
+                            var box = document.createElement('div');
                             box.className = 'clean-popup-box' ;
                             box.innerText = hint;
 
