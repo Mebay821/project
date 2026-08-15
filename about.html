@@ -193,6 +193,56 @@
         .submit-btn:active{
             transform: translateY(1px);
         }
+        details[open] {
+    border-color: 2px solid #bae6fd;
+    box-shadow: 0 4px 12px rgba(146, 172, 180, 0.15);
+        }
+        details[open] summary::before{
+            transform: rotateX(90deg);
+        }
+
+details {
+    border: 2px solid #bae6fd;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #f0f9ff ;
+    box-shadow: 0 2px 8px rgba(94, 138, 155, 0.05);
+    font-size: 1.2rem;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+
+ ::after, ::before {
+    box-sizing: border-box;
+}
+ ::after, ::before {
+    box-sizing: border-box;}
+    details[open] summary::before {
+    transform: rotate(90deg);
+}
+summary::before {
+    display:inline-block;
+    content: '💦';
+    margin-right: 0.75rem;
+    color: #d9437a;
+    transition: transform 0.3s ease;
+    font-size: 0.8rem;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+summary {
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 600;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
         </style>
     </head>
     <body>
@@ -286,7 +336,28 @@
                 <p class="about-text">In many communities, managing water queues can be a challenge, as it runs on a rotating schedule rather than 24/7. Missing an allocation day may cause critical water shortages that will last for  a week on households.</p>
                 <h2>Project goals</h2>
                 <p class="about-text">This utility provides an accesible public portals to monitor local nieghbourhood water status updates.</p>
-            </section>
+            </section><br>
+
+            <details >
+                    <summary>
+                        For additional water related information: 
+                        </summary>
+                    <p class="mt-2 mb-0">
+                        Press the links below
+                    <ul style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1rem; color:black;">
+                        <li>
+                            <a href="https://aawsa.gov.et" >Official A.A Water Administration </a>
+                        </li>
+                        <li>
+                            <a href="https://veiethiopia.com">Institutional Background </a>
+                        </li>
+                        <li>
+                            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10929026/">Environmental Initiatives and Community Programs</a>
+                        </li>
+                    </ul>
+                    </p>
+            </details>
+
             <div class="form-container">
                 <h2>Report Pipeline Delay</h2>
                 <p>Notice a disruption in your district's schedule? Let the community know about it!</p>
