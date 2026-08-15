@@ -254,10 +254,22 @@
             <section class="login-box">
             <h2>Login to see your schedule</h2>
             <form id="loginForm" method="get">
+
               <div class="form-group">
                 <label for="username">Name</label>
-                <input type="text" id="username" name="username" class="form-group-input" required><br>
+                <input type="text" id="homeName" name="username" class="form-group-input" required><br>
               </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="homeEmail" name="email" class="form-group-input" required><br>
+              </div>
+
+              <div class="form-group">
+                <label for="district">District.No</label>
+                <input type="text" id="homeDistrict" name="district" class="form-group-input" required><br>
+              </div>
+
               <div class="form-group">
                 <label for="password">Password</label>
                 <input
@@ -287,16 +299,24 @@
   ></script>
    <script>
           document.getElementById('loginForm').addEventListener('submit', function(event) {
-            // Stop the form from trying to post to a server
             event.preventDefault();
-            // Explicitly check if the minlength and pattern rules pass
-            if (event.target.checkValidity()) {
-            window.location.href="dashboard.html"; //Onlyopens if valid!
-            }else{
-              // Triggers standard red browser popup warnings automatically
+            if(event.target.checkValidity()){
+               
+
+            const name = document.getElementById("homeName").value;
+            const email = document.getElementById("homeEmail").value;
+            const district = document.getElementById("homeDistrict").value;
+
+            localStorage.setItem("saved_name", name);
+            localStorage.setItem("saved_email", email);
+            localStorage.setItem("saved_district", district);
+             
+            window.location.href = "dashboard.html";
+           }else{
               event.target.reportValidity();
             }
-            })
+          
+          });
         </script>
 
     </body>
