@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JS intro</title>
+    </head>
+    <body style="font-size: 50px;">
+        <h2>WHAT CAN A JS DO</h2>
+        <p>it can change HTML attribute value</p>
+
+        <p>CHANGING VALUE OF SOURCE</p>
+        <button onclick="turnOn()" style="background-color: rgb(255, 255, 255); color:black; font-size: 40px; padding:40px 60px; box-shadow: black; ">turn on</button>
+        <img alt="Lighted Bulb" id="myImage" src="https://static.vecteezy.com/system/resources/previews/043/913/399/non_2x/light-bulb-glyph-inverted-icon-design-vector.jpg" width:5px; height:5px;>
+
+        <button onclick="turnOff()" style="color: rgb(255, 255, 255); background-color: black; font-size: 40px; padding:40px 60px; box-shadow: white; ">turn off</button>
+        
+
+        <p id="demo">JavaScript can change the style of an HTML element.</p>
+
+<button type="button" onclick="document.getElementById('demo').style.color='green'" style="background-color: rgb(255, 255, 255); color:black; font-size: 40px; padding:40px 60px;" >Click Me!</button>
+<button type="button" onclick="document.getElementById('demo').style.color='black'" style="background-color: rgb(255, 255, 255); color:black; font-size: 40px; padding:40px 60px;" >Return</button>
+
+
+<p id="hide" >JavaScript can hide an HTML element.</p><br><br>
+
+<button type="button" style="color: rgb(255, 255, 255); background-color: black; font-size: 40px; padding:40px 60px;" onclick="document.getElementById('hide').style.display='none' ">hide</button>
+        <button type="button" style="color: rgb(255, 255, 255); background-color: black; font-size: 40px; padding:40px 60px;" onclick="document.getElementById('hide')"> appear </button>
+
+
+        
+        
+        
+        <script>
+            function turnOn(){
+                document.getElementById('myImage').src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8EbtQqzkshZGssJKebSggLk5BFpvFDUGBl4c6-aBWGQ&s=10";
+
+            }
+
+            function turnOff() {
+                document.getElementById('myImage').src="https://static.vecteezy.com/system/resources/previews/043/913/399/non_2x/light-bulb-glyph-inverted-icon-design-vector.jpg";
+            }
+        </script>
+    </body>
+</html>
