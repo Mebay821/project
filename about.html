@@ -14,7 +14,7 @@
 
         <style>
             body {
-                font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto sans-serif;
                 background-image:URL(./water.bck.jpg);
                 background-size: cover;
                 background-position: center;
@@ -357,7 +357,7 @@ summary {
             <div class="form-container">
                 <h2>Report Pipeline Delay</h2>
                 <p>Notice a disruption in your district's schedule? Let the community know about it!</p>
-                <form action="about.html" method="GET" id="reportForm">
+                <form action="about.html" method="GET" id="reportForm" onsubmit="event.preventDefault(); document.getElementById('feedbackMessage').innerText='Thank you for you collaboration!'; this.reset();">
                     <div class="form-group">
                         
                         <input type="text" id="aboutName" placeholder="Your Name">
@@ -375,16 +375,32 @@ summary {
                         <textarea id="issue-details" name="issue-details" required placeholder="Please provide details about the disruption..." rows="4"></textarea>
                     </div>
                     <button  type="submit" class="submit-btn">Submit Report</button>
+                    <div id="feedbackMessage" style="color:#0284c7; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 15px; font-weight:bold; text-align: center;"></div>
                 </form>
             </div><br><br>
-            <div class="qrcode">
-                <h3 
-                style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                font-size: 25px; background-color: #f0f9ff; color: #0284c7; border-width: 20px ;border-color: #0284c7; border-radius: 6px;
-                ">Save the QRCODE below for next use!</h3>
+            <div class="qrcode" style="display: flex; flex-direction: column; align-items: center; justify-content: center;  padding: 25px;  max-width: 500px; margin: 20px auto;  border:2px solid #bae6fd ;
+            border-radius: 12px;
+            background-color: #f0f9ff;
+            box-shadow: inset 0 0 10px rgba(2, 132, 199, 0.02);">
+                <div>
+                    <h3 style="
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto sans-serif;
+            font-size: 20px; 
+            font-weight: bold;
+            color: black; 
+            border-color: #0284; 
+            border:2px solid #bae6fd ;
+            padding: 10px;
+            border-radius: 6px;
+            background-color: #ffffff;
+            box-shadow: inset 0 0 10px rgba(2, 132, 199, 0.02);
+            border-style: double;"
+                >Save the QRCODE below for next use!</h3>
                 
             </div> 
-            <img style="display:flexbox center;"src="./qrcode.jpeg" alt="website QRcode" width="100" height="100">   <br><br>
+            <img src="./qrcode.jpeg" alt="website QRcode" width="160" height="160" style="display: block; border: #0284; margin: 15px 0; ">   <br><br>
+
+            </div>
             <button style="border-radius:360px; border-color: #0284c7;" aria-label="back to home page">
                 <a href="./index.html">
                 <span class="icon">↩</span>
@@ -424,12 +440,6 @@ summary {
     });
   </script>
 
-  <script>
-    document.getElementById('reportForm').addEventListener('submit', function(event) {
-        event.preventDefault(); 
-        alert("Thankyou for your collaboration.");
-        this.reset();
-    });
-  </script>
+  
     </body>
     </html>
