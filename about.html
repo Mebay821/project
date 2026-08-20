@@ -357,7 +357,7 @@ summary {
             <div class="form-container">
                 <h2>Report Pipeline Delay</h2>
                 <p>Notice a disruption in your district's schedule? Let the community know about it!</p>
-                <form action="about.html" method="GET">
+                <form action="about.html" method="GET" id="reportForm">
                     <div class="form-group">
                         
                         <input type="text" id="aboutName" placeholder="Your Name">
@@ -374,7 +374,7 @@ summary {
                         <label class="form-group-input">Disruption Details:</label>
                         <textarea id="issue-details" name="issue-details" required placeholder="Please provide details about the disruption..." rows="4"></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">Submit Report</button>
+                    <button  type="submit" class="submit-btn">Submit Report</button>
                 </form>
             </div><br><br>
             <div class="qrcode">
@@ -421,6 +421,14 @@ summary {
         if (storedDistrict) {
             document.getElementById("aboutDistrict").value = storedDistrict;
         }
+    });
+  </script>
+
+  <script>
+    document.getElementById('reportForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        alert("Thankyou for your collaboration.");
+        this.reset();
     });
   </script>
     </body>
