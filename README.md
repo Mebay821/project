@@ -11,6 +11,6 @@ This project helps inform residents on current tap-water flow status, water-rela
 * Usage charge
 * Interactive-panels
 ## LANGUAGES
-*HTML
-*CSS
-*JAVASCRIPT
+* HTML
+* CSS
+* JAVASCRIPT
