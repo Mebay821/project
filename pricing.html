@@ -98,23 +98,7 @@
             }
             .accent-text{color:#0284c7; font-weight: 600;}
             .alert-text{color:#c93508; font-weight: 600;}
-            .div class-box {
-                background-color:#f0f9ff;
-                border: 2px solid #bae6fd;
-                padding: 30px;
-                margin-top: 40px;
-                border-radius: 12px;
-                box-shadow: inset 0 0 10px rgba(2, 132, 199, 0.02);
-            }
-            .div class-box h2 {
-                margin-top: 0;
-                margin-bottom: 8px ;
-            }
-            .div class-box p{
-                font-size:0.95rem;
-                color:#334155;
-                margin-bottom: 20px;
-            }
+            
             .input-group {
                 margin-bottom: 20px ;
                 text-align:left;
@@ -156,7 +140,8 @@
                 transition:background-color 0.3s ease;
             }
             #calculateBtn.hover{
-                background-color:#0369a1;
+                background-color:#082536;
+                color: #cfcccc;
             }
             .price-hihglights{
                 color:#0284c7;
@@ -201,7 +186,7 @@
 
             .image-link-container a:hover img {
             transform: translateY(-5px) scale(1.08) rotate(4deg);
-            background-color: #f5efe6;
+            background-color: rgba(255,255,255, 0.5);
             border-color: #0284; 
             box-shadow: 0 10px 18px rgba(78, 52, 46, 0.12); 
             }
@@ -430,7 +415,7 @@
                     <label for="volume-input">Target Volume Allocation (m&sup3;):</label>
                     <input type="number" id="targetVolume" name="volume" required min="1" max="500" placeholder="e.g = 10">
                 </div>
-                <button type="button" id="calculateBtn" >
+                <button class="caclculateBtn" type="button" id="calculateBtn" >
                     Calculate Estimated Bill
                 </button>
             </form>

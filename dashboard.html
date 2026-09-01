@@ -22,10 +22,12 @@
                 background-repeat: no-repeat;
                 color: #0f172a;
                 margin: 0;
-                padding: 40px 20px;
-                
-                
-                
+                padding: 40px 20px;   
+            }
+
+            @media (max-width: 900px) {
+                body {
+                    text-align: center;              }
             }
             header {
                 text-align: center;
@@ -80,7 +82,7 @@
                 line-height: 1.7;
                 margin-top:25px;
                 margin-bottom: 25px; 
-                text-align:justify;
+                text-align:center;
             }
             h2{
                 color:#0369a1;
@@ -380,11 +382,7 @@
         </ul>
     </header>
     
-        <p class="dashboard-intro" style="font-size:large; padding: 0px; margin: 0; color:#044061" >Inside this page you can actually look into your personal water usage. 
-                This page can calculate and let you know if there has been any increment
-                 of consumption from the past month, how much it may cost and any other related requirments. 
-                 And also you can catch up with the water distribution of your district. </p><br>
-    
+        <p class="dashboard-intro" style="font-size:large;  color:#044061" >Inside this page you can actually look into your personal water usage. This page can calculate and let you know if there has been any increment of consumption from the past month, how much it may cost and any other related requirments. And also you can catch up with the water distribution of your district. </p><br> 
             <div class="water-report-box">
                 <h2>Water Usage Report</h2>
                 <form id="usageForm">
